@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .loader {
+    overflow: hidden;
+    background-color: white;
+    margin: 0 15px;
+    height: 80px;
+    width: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px white;
+    position: relative;
+  }
+  
+  .loader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 420px 0 400px #2697f3,
+    inset 0px 0px 0px rgba(0, 0, 0, 0.1);
+    animation: animate_2 2.5s ease-in-out infinite;
+    animation-delay: calc(-0.5s * var(--i));
+  }
+  
+  @keyframes animate_2 {
+    0% {
+      transform: translateY(250px);
+      filter: hue-rotate(0deg);
+    }
+  
+    50% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(250px);
+      filter: hue-rotate(180deg);
+    }
+  }
+  
+  </style>
+</head>
+<body>
+
+  <section class="block">
+
+    <div class="loader" style="--i:0">
+    </div>
+    <div class="loader" style="--i:1">
+    </div>
+    <div class="loader" style="--i:2">
+    </div>
+    <div class="loader" style="--i:3">
+    </div>
+    <div class="loader" style="--i:4">
+    </div>
+  </section>
+</body>
+
+
+</html>
