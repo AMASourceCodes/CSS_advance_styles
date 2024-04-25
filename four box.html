@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+.spinner{
+  position: absolute;
+  background-color: yellow;
+  height: 70px;
+  width: 70px;
+  mix-blend-mode:screen;
+  animation: box1 infinite 2s linear;
+  border-radius: 5px;
+
+}
+@keyframes box1 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: rotate(180deg) scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+span{
+    position: absolute;
+  border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    animation: box2 3s linear infinite;
+}
+@keyframes box2 {
+    0%{
+        transform: scale(.6);
+    }
+    50%{
+        transform: rotate(-180deg) scale(1.2);
+    }
+    100%{
+        transform: scale(.6);
+    }
+}
+span:nth-child(1){
+    background: green;
+    width: 70px;
+    height: 70px;
+    top: 50px;
+    left: 50px;
+}
+span:nth-child(2){
+    background: rgb(0, 102, 128);
+    width: 70px;
+    height: 70px;
+    top: -50px;
+    left: 50px;
+}
+span:nth-child(2){
+    background: rgb(219, 8, 8);
+    width: 70px;
+    height: 70px;
+    top: -50px;
+    left: 50px;
+}
+span:nth-child(3){
+    background: rgb(0, 102, 128);
+    width: 70px;
+    height: 70px;
+    top: 50px;
+    left: -50px;
+}
+span:nth-child(4){
+    background: rgb(253, 6, 233);
+    width: 70px;
+    height: 70px;
+    top: -50px;
+    left: -50px;
+}
+  </style>
+
+</head>
+
+<body>
+<div class="spinner">
+    <span></span><span></span><span></span><span></span>
+</div>
+</body>
+
+
+</html>
