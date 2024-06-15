@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Infinite Image Carousel</title>
+      <style>
+            * {
+                  padding: 0;
+                  margin: 0;
+            }
+
+            body {
+                  background-color: rgb(0, 157, 255);
+            }
+
+            .image-carousel {
+                  overflow: hidden;
+                  white-space: nowrap;
+                  display: flex;
+                  align-items: center;
+                  height: 100vh;
+            }
+
+            .images {
+                  display: inline-block;
+                  animation: carousel 15s infinite linear;
+            }
+
+            img {
+                  width: 180px;
+                  height: 100%;
+                  padding: 0 30px;
+            }
+
+            @keyframes carousel {
+                  to {
+                        transform: translateX(-100%);
+                  }
+            }
+      </style>
+</head>
+
+<body>
+      <div class="image-carousel">
+            <div class="images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="Lorem Images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="Lorem Images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="Lorem Images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="lorem Images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="Lorem Images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="Lorem Images">
+            </div>
+            <div class="images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="Lorem Images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="Lorem Images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="Lorem Images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="lorem Images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="Lorem Images">
+                  <img src="https://banizzo.codexup.com/wp-content/uploads/2023/10/4-2.png" alt="Lorem Images">
+            </div>
+      </div>
+</body>
+
+</html>
